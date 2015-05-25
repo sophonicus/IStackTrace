@@ -43,6 +43,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -175,6 +177,45 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\DomainModels\Article.cs">
+      <DependentUpon>IStackTraceModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DomainModels\AspNetRole.cs">
+      <DependentUpon>IStackTraceModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DomainModels\AspNetUser.cs">
+      <DependentUpon>IStackTraceModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DomainModels\AspNetUserClaim.cs">
+      <DependentUpon>IStackTraceModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DomainModels\AspNetUserLogin.cs">
+      <DependentUpon>IStackTraceModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DomainModels\C__MigrationHistory.cs">
+      <DependentUpon>IStackTraceModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DomainModels\C__RefactorLog.cs">
+      <DependentUpon>IStackTraceModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DomainModels\IStackTraceModels.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IStackTraceModels.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DomainModels\IStackTraceModels.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IStackTraceModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DomainModels\IStackTraceModels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IStackTraceModels.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DomainModels\Tag.cs">
+      <DependentUpon>IStackTraceModels.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -194,6 +235,23 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\DomainModels\IStackTraceModels.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>IStackTraceModels.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\DomainModels\IStackTraceModels.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>IStackTraceModels.edmx</DependentUpon>
+      <LastGenOutput>IStackTraceModels.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\DomainModels\IStackTraceModels.edmx.diagram">
+      <DependentUpon>IStackTraceModels.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\DomainModels\IStackTraceModels.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>IStackTraceModels.edmx</DependentUpon>
+      <LastGenOutput>IStackTraceModels.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -281,6 +339,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
