@@ -21,7 +21,7 @@ namespace IStackTrace.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("IStackTraceLocalDB", throwIfV1Schema: false)
         {
         }
 

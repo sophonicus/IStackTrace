@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Article]
+﻿CREATE TABLE [dbo].[Articles]
 (
 	[ArticleId] INT NOT NULL PRIMARY KEY, 
     [Description] VARCHAR(300) NULL, 
